@@ -6,4 +6,7 @@ export interface ListProps {
   color?: string;
 }
 
-export interface ListItemProps extends ListProps {}
+export type ListItemProps = {
+  children: ReactNode;
+  className?: string;
+};
