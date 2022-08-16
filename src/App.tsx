@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import Input from 'components/Input';
 import List from 'components/List';
 
-import useAsyncMount from 'hooks/useAsyncMount';
+import useMount from 'hooks/useMount';
 
 import { BASE_URL } from 'config/constants';
 
@@ -37,7 +37,7 @@ function App() {
     }));
   };
 
-  useAsyncMount(async () => {
+  useMount(async () => {
     const { data } = await (await fetch(BASE_URL)).json();
     setPlayers(prevPlayers => ({
       ...prevPlayers,
